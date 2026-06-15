@@ -34,7 +34,7 @@ function App() {
       setResult(data);
       setText('');
     } catch (err) {
-      setError('Connection to EdgeAssist engine failed. Is the backend running?');
+      setError('Connection to VOX engine failed. Is the backend running?');
       console.error(err);
     } finally {
       setLoading(false);
