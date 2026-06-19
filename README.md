@@ -42,10 +42,8 @@ VOX is a fully **offline Natural Language Understanding (NLU) engine** purpose-b
 | Feature | Description |
 |---|---|
 | 🗣️ **Hinglish NLU** | Understands natural code-mixed Hindi-English commands out of the box |
-| 📴 **Fully Offline** | Zero network dependency; all inference runs on-device via ONNX Runtime (CPU) |
 | ⚡ **Sub-10ms Inference** | Bi-GRU model under 300k parameters — blazing fast even on budget hardware |
 | 🎯 **Dual Extraction** | Intent classification (ML) + Slot extraction (deterministic Regex engine) |
-| 🎙️ **Voice Input** | Browser MediaRecorder API integration with STT pipeline support |
 | 📊 **Benchmark Suite** | Built-in `/benchmark` endpoint for latency, memory, and accuracy profiling |
 | 🧩 **Modular Design** | Clean separation: ML pipeline → ONNX inference → FastAPI → React UI |
 
@@ -244,7 +242,6 @@ A **mobile-first dark-mode dashboard** that simulates the delivery partner's And
 ### Features
 
 - 📝 **Text Input** — Type any Hinglish command
-- 🎙️ **Voice Recording** — Browser MediaRecorder API integration
 - 🎯 **Intent Gauge** — Visual confidence meter for classified intent
 - 🏷️ **Slot Chips** — Extracted entities as interactive badges
 - 💬 **Response Panel** — Contextual action suggestions based on intent
@@ -261,13 +258,13 @@ App runs at `http://localhost:5173`
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/your-username/edge-assist.git
-cd edge-assist
+cd VOX
 ```
 
 ### 2. Train & Export the Model
