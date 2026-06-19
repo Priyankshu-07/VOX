@@ -1,0 +1,551 @@
+text,intent,style
+ustad petrol khtaam ki wajah se 20 min late honga,report_delay,augmented_spelling
+20 min late pahunchunga tyre puncture h,report_delay,abbreviated
+boss baraish ki wajah se 15 mins late honga,report_delay,augmented_spelling
+late ho jaunga ek ghanta,report_delay,abbreviated
+gate par koi nahi hai yaar,customer_unavailable,casual_hindi
+20 min late pahunchunga baarish hai,report_delay,abbreviated
+ustad bheed ki vjh se 10 minute late honga,report_delay,abbreviated
+yaar petrol khatam ki wajah se aadh ghanta late honga,report_delay,abbreviated
+late ho jaunga 15 mins,report_delay,abbreviated
+15 mins late pahunchunga tyre puncture h,report_delay,abbreviated
+guru tyre puncture ki wajah se 5 min late honga,report_delay,abbreviated
+bawa bheed ki wjh se 10 minute late honga,report_delay,abbreviated
+alte ho jaunga 20 min,report_delay,augmented_spelling
+10 minute late pahunchunga accident h,report_delay,abbreviated
+lat ho jaunga ek ghanta,report_delay,augmented_spelling
+galat order de diya h,order_issue,abbreviated
+5 min late pahunchunga baarish h,report_delay,abbreviated
+ustad bheed ki wajah se aadh ghanta late honga,report_delay,casual_hindi
+bhaiya petrol khatam ki wjh se 15 mins late honga,report_delay,abbreviated
+bhaiya tyre puncture ki wjh se 20 min late honga,report_delay,abbreviated
+late ho junga 15 mins,report_delay,augmented_spelling
+15 mins late pahunchunga bheed hai,report_delay,augmented_spelling
+late ho jaunga 5 min,report_delay,casual_hindi
+location samajh nahi aa rha,navigation_help,abbreviated
+boss baarish ki wajah se aadh ghanta late honag,report_delay,augmented_spelling
+boss tyre puncture ki wajah se aadh ghanta late honga,report_delay,augmented_spelling
+gate ar koi nahi hai yaar,customer_unavailable,augmented_spelling
+bhai tyre puncture ki wajah se 5 min late honga,report_delay,augmented_spelling
+5 min late pahunchunga baarish hai,report_delay,casual_hindi
+5 min late pahunchunga petrol khatam hai,report_delay,augmented_spelling
+bhaiya traffic ki vjh se aadh ghanta late honga,report_delay,abbreviated
+aadh ghanta late pahunchunga hbeed hai,report_delay,augmented_spelling
+sir mujhe aane mein 5 min lagenge,report_delay,abbreviated
+15 mins late pahunchung petrol khatam hai,report_delay,augmented_spelling
+bhai accident ki vjh se 15 mins late honga,report_delay,abbreviated
+10 minute late pahnuchunga bheed hai,report_delay,augmented_spelling
+20 imn late pahunchunga accident hai,report_delay,augmented_spelling
+customer mil ni rha,customer_unavailable,abbreviated
+bhai custoer phone nahi utha raha,customer_unavailable,augmented_spelling
+traffic ke karan delay hoga,report_delay,abbreviated
+yaar baarish ki wajah se 5 min late honga,report_delay,augmented_spelling
+20 min late pahunchunga traffic hai,report_delay,casual_hindi
+ustad petrol khatam ki wajah se aadh ghanta late honga,report_delay,augmented_spelling
+yaar bheed ki vjh se 5 min late honga,report_delay,abbreviated
+yaar customer phone nahi utha raha,customer_unavailable,casual_hindi
+5 min alte pahunchunga accident hai,report_delay,augmented_spelling
+location samajh nahi aa raha,navigation_help,casual_hindi
+10 minute late pahunchunga accident hai,report_delay,augmented_spelling
+15 mins late pahunchunga traffic hai,report_delay,casual_hindi
+yaar accident ki wajah se aadh ghanta late honga,report_delay,casual_hindi
+ek ghanta late pahunchunga bheed hai,report_delay,augmented_spelling
+bhaiya traffic ki vjh se 5 min late honga,report_delay,abbreviated
+ytre puncture ki wajah se aadh ghanta late honga,report_delay,augmented_spelling
+bhaiya accident ki vjh se 10 minute late honga,report_delay,abbreviated
+5 min late pahunchunga behed hai,report_delay,augmented_spelling
+bawa bheed ki wajah se 5 min late honga,report_delay,abbreviated
+mahoday grahak ka location bhejein,get_address,formal_hindi
+yaar bheed ki vjh se ek ghanta late honga,report_delay,abbreviated
+20 min late pahunchunga baarish hai,report_delay,casual_hindi
+gate par koi nahi h bhai,customer_unavailable,abbreviated
+bawa tyre puncture ki vjh se 15 mins late honga,report_delay,abbreviated
+20 min late pahunchunga petrol khatam h,report_delay,abbreviated
+mahoday grahak sampark mein nahi hain,customer_unavailable,augmented_spelling
+ustad baarish ki wajah e 20 min late honga,report_delay,augmented_spelling
+bhi accident ki wjh se aadh ghanta late honga,report_delay,abbreviated
+10 minuet late pahunchunga baarish hai,report_delay,augmented_spelling
+number not reachable hai,customer_unavailable,casual_hindi
+ek ghanta late pahunchunga traffic hai,report_delay,abbreviated
+bawa bheed ki wjh se ek ghanta late honga,report_delay,abbreviated
+bawa order cancel kar do,order_issue,abbreviated
+5 min late pahunchunga baarish hai,report_delay,augmented_spelling
+mahoday aagami aadesh ka pata pradan kaerin,get_address,augmented_spelling
+ek ghanta late pahunchunga tyre puncture hai,report_delay,casual_hindi
+location send kr bhaiya,get_address,abbreviated
+ek ghanta late pahunchunga tyre puncture h,report_delay,abbreviated
+petrol khatam ki wajah se aadh ghanta late honga,report_delay,augmented_spelling
+item missing hai,order_issue,casual_hindi
+galat order de diy hai,order_issue,augmented_spelling
+15 mins late pahunchunga petrol khatam hai,report_delay,casual_hindi
+aadh hganta late pahunchunga accident hai,report_delay,augmented_spelling
+ek ghanta late pahunchunga baarish hai,report_delay,casual_hindi
+accident ki wjh se 15 mins late honga,report_delay,abbreviated
+package damgae ho gaya bhaiya,order_issue,augmented_spelling
+15 mins late pahunchunga traffic h,report_delay,abbreviated
+15 mins late pahunchunga accident hai,report_delay,casual_hindi
+aadh ghanta late pahunchunga eptrol khatam hai,report_delay,augmented_spelling
+5 min late pahunchunga baarihs hai,report_delay,augmented_spelling
+10 minute late pahunchunga tyre puncture hai,report_delay,abbreviated
+aadh ghanta late pahunchunga accident hai,report_delay,casual_hindi
+guru bheed ki vjh se 10 minute late honga,report_delay,abbreviated
+bheed ki wajah se aadh ghanta late honga,report_delay,augmented_spelling
+ek ghanta late pahunchunga petol khatam hai,report_delay,augmented_spelling
+late ho jaunga 10 minute,report_delay,abbreviated
+10 minute late pahunchunga accident h,report_delay,abbreviated
+bhaiya accident ki wjh se aadh ghanta late honga,report_delay,abbreviated
+bhai map stuck ho gaya h,navigation_help,abbreviated
+10 minute late pahunchunga baarish hai,report_delay,casual_hindi
+yaar tyre puncture ki vjh se 20 min late honga,report_delay,abbreviated
+boss baarish ki wajah se aadh ghanta lat ehonga,report_delay,augmented_spelling
+ustad bheed ki vjh se 10 minute late honga,report_delay,abbreviated
+sir aagami aadesh a pata pradan karein,get_address,augmented_spelling
+15 mins late pahunchunga petrol khatam hai,report_delay,casual_hindi
+yaar bheed ki wajah se 10 minute late honga,report_delay,casual_hindi
+10 minute late pahunchunga traffic h,report_delay,abbreviated
+bsos baarish ki wajah se aadh ghanta late honga,report_delay,augmented_spelling
+20 min late pahunchunga accident h,report_delay,abbreviated
+bawa petrol khatam ki wajah se ek ghanta late honga,report_delay,abbreviated
+kripya map kaam nahi kar raha,navigation_help,augmented_spelling
+boss baarish ki wajah se ek ghanta late honga,report_delay,augmented_spelling
+boss accident ki vjh se aadh ghanta late honga,report_delay,abbreviated
+bheed ke karan delay hoga,report_delay,formal_hindi
+guru cacident ki wajah se 15 mins late honga,report_delay,augmented_spelling
+boss petrol khatam ki wajah se 5 min late honga,report_delay,augmented_spelling
+ustad baarish ki wjh se 20 min late honga,report_delay,abbreviated
+10 minute late pahunchunga petrol katam hai,report_delay,augmented_spelling
+bawa next order ka add batao,get_address,abbreviated
+ustad bheed ki waja hse 20 min late honga,report_delay,augmented_spelling
+ek ghanta late pahunchunga tyre puncture hai,report_delay,casual_hindi
+package damage ho gaya,order_issue,abbreviated
+bawa customre kidhar hai,get_address,augmented_spelling
+15 mins late pahunchunga traffic hai,report_delay,casual_hindi
+guru petrol khatam ki wajah se 15 mins late honga,report_delay,augmented_spelling
+late ho jaunga 5 min,report_delay,abbreviated
+aadh ghanta late pahunchunga traffic hai,report_delay,augmented_spelling
+bhaiya petrol khatam ki wajah se ek ghanta late honag,report_delay,augmented_spelling
+15 mins late pahunchunga baarish hai,report_delay,casual_hindi
+ek ghanta late ahunchunga baarish hai,report_delay,augmented_spelling
+bhaiya baarish ki wajah se 20 min lae honga,report_delay,augmented_spelling
+mahoday mujhe aane mein 20 min lagenge,report_delay,abbreviated
+ek ghanta late pahunchunga traffic hai,report_delay,augmented_spelling
+number not reachable h,customer_unavailable,abbreviated
+10 minute late pahunchunga traffic hai,report_delay,casual_hindi
+boss next order ka address batoa,get_address,augmented_spelling
+item missing h,order_issue,abbreviated
+customer mil nai rha,customer_unavailable,abbreviated
+trafic ke karan delay hoga,report_delay,augmented_spelling
+olcation samajh nahi aa raha,navigation_help,augmented_spelling
+gps hang ho gaya,navigation_help,abbreviated
+location send kro,get_address,abbreviated
+bhaiya tyre puncture ki vjh se aadh ghanta late honga,report_delay,abbreviated
+bha bheed ki wajah se 10 minute late honga,report_delay,augmented_spelling
+aadh ghanta late pahunchunga tyre puncture hai,report_delay,abbreviated
+boss traffic ki wajah se 5 min late honga,report_delay,casual_hindi
+yaar baarish ki vjh se 5 min late honga,report_delay,abbreviated
+location samajh ni aa rha,navigation_help,abbreviated
+bawa petrol khatam ki wjh se 10 minute late honga,report_delay,abbreviated
+traffic ki vjh se 10 minute late honga,report_delay,abbreviated
+late ho jaunga ek ghanta,report_delay,abbreviated
+ek ghanta late pahunchunga traffic hi,report_delay,augmented_spelling
+20 min late pahunchunga traffic hai,report_delay,augmented_spelling
+boss traffic ki wajah se 10 minute late honga,report_delay,abbreviated
+baarish ki wjh se 10 minute late honga,report_delay,abbreviated
+bhai traffic ik wajah se 15 mins late honga,report_delay,augmented_spelling
+guru traffic ki wajahs e 10 minute late honga,report_delay,augmented_spelling
+bheed ki wjh se 10 minute late honga,report_delay,abbreviated
+item missing h,order_issue,abbreviated
+bhaiya traffic ki wajah se 15 min late honga,report_delay,augmented_spelling
+guru tyre puncture ki vjh se aadh ghanta late honga,report_delay,abbreviated
+bhai order cance kar do,order_issue,augmented_spelling
+10 minute late pahuncuhnga tyre puncture hai,report_delay,augmented_spelling
+bawa accident ki wajah se 15 mins late honga,report_delay,abbreviated
+5 min late pahunchunga bheed hai,report_delay,abbreviated
+bhai baarish ki wajah se 2 min late honga,report_delay,augmented_spelling
+boss customer phone nahi utah raha,customer_unavailable,augmented_spelling
+late ho jaunga 20 min,report_delay,abbreviated
+guru next order ka address batao,get_address,augmented_spelling
+10 minute late pahunchunga petrol khatam hai,report_delay,augmented_spelling
+rasta dkhao bhaiya,navigation_help,augmented_spelling
+order cancel kar do,order_issue,abbreviated
+bawa traffic ki wajah se 10 minute late hnga,report_delay,augmented_spelling
+ek ghanta late pahunchunga tyre puncture hai,report_delay,abbreviated
+location samajh nahi aa raha,navigation_help,augmented_spelling
+yaar baarish ki wajah se 15 mins late honga,report_delay,casual_hindi
+bh petrol khatam ki vjh se ek ghanta late honga,report_delay,abbreviated
+bawa tyre puncture ki wajah se 20 min late honga,report_delay,casual_hindi
+ek ghanta late pahunchunga traffic h,report_delay,abbreviated
+10 minute late pahunchunga tyre punctur ehai,report_delay,augmented_spelling
+late ho jaunga 15 mins,report_delay,augmented_spelling
+bhai traffic ki wajah se ek ghanta late honga,report_delay,augmented_spelling
+tyre puncture ke karan delay hgoa,report_delay,augmented_spelling
+package damage ho gaya bawa,order_issue,abbreviated
+yaar bheed ki wajah se ek ghanta lat honga,report_delay,augmented_spelling
+20 mi late pahunchunga baarish hai,report_delay,augmented_spelling
+5 min lat epahunchunga baarish hai,report_delay,augmented_spelling
+bawa tyre puncture ki wajah se ek ghanta late honga,report_delay,abbreviated
+yaara ccident ki wajah se 20 min late honga,report_delay,augmented_spelling
+accident ke karan delay hoga,report_delay,abbreviated
+10 minute late pahunchunga petrol khatam hai,report_delay,casual_hindi
+gate par koi nahi hai bhai,customer_unavailable,casual_hindi
+yaar bheed ki wajah se 20 min late honga,report_delay,abbreviated
+bhaiya traffic ki wajah se 20 min late honga,report_delay,abbreviated
+item msising hai,order_issue,augmented_spelling
+sir mujhe aane mein 10 minute lagenge,report_delay,augmented_spelling
+adah ghanta late pahunchunga traffic hai,report_delay,augmented_spelling
+package damage ho gaya yaar,order_issue,casual_hindi
+boss accident ki vjh se 20 min late honga,report_delay,abbreviated
+item missing h,order_issue,abbreviated
+sir mujhe aaen mein 15 mins lagenge,report_delay,augmented_spelling
+5 min late pahunchnuga traffic hai,report_delay,augmented_spelling
+aadh ghanta late pahunchunga baarish h,report_delay,abbreviated
+10 minute late pahunchungat yre puncture hai,report_delay,augmented_spelling
+orde cancel kar do,order_issue,augmented_spelling
+15 mins late pahunchunga traffic hai,report_delay,abbreviated
+ustad baarish ki wajah se 15 mins lateh onga,report_delay,augmented_spelling
+ustad customer phone ni utha raha,customer_unavailable,abbreviated
+guru next order ka address batao,get_address,casual_hindi
+bawa traffic ki vjh se 5 min late honga,report_delay,abbreviated
+baarish ki wjh se 10 minute late honga,report_delay,abbreviated
+package damage ho gaya bawa,order_issue,abbreviated
+late ho jaunga 15 mins,report_delay,abbreviated
+gate pa rkoi nahi hai boss,customer_unavailable,augmented_spelling
+sri map kaam nahi kar raha,navigation_help,augmented_spelling
+bhai map stuck ho gaya hai,navigation_help,augmented_spelling
+boss traffic ki wajah se 5 min late honga,report_delay,abbreviated
+bhaiya tyre puncture ki wajah se 10 inute late honga,report_delay,augmented_spelling
+baarsih ki wajah se aadh ghanta late honga,report_delay,augmented_spelling
+item mssing hai,order_issue,augmented_spelling
+20 min late pahunchunga traffic h,report_delay,abbreviated
+bhi tyre puncture ki wajah se 20 min late honga,report_delay,abbreviated
+15 mins late pahunchunga petrol khatam hai,report_delay,abbreviated
+ustad petrol khatam ki wjh se 5 min late honga,report_delay,abbreviated
+late ho jaunga aadh ghanta,report_delay,abbreviated
+20 min late pahunchunga bheed hai,report_delay,augmented_spelling
+ustad bheed ki wajah se 10 minute late honga,report_delay,casual_hindi
+guru traffick i wajah se 10 minute late honga,report_delay,augmented_spelling
+mahoday mujhe aane mein 20 min lagenge,report_delay,abbreviated
+bh accident ki vjh se 10 minute late honga,report_delay,abbreviated
+late ho jaunga 5 min,report_delay,abbreviated
+kripya mujhe aane mein 5 min lagenge,report_delay,abbreviated
+traffic ki wajah se 15 min slate honga,report_delay,augmented_spelling
+guru traffic ki wjh se 5 min late honga,report_delay,abbreviated
+bhaiya trafifc ki wajah se aadh ghanta late honga,report_delay,augmented_spelling
+15 ins late pahunchunga baarish hai,report_delay,augmented_spelling
+traffic ki wajah se 20 min late honga,report_delay,abbreviated
+bawa petrol khatam ki wajah se 5 min late honga,report_delay,casual_hindi
+20 min late pahunchunga petrol khatma hai,report_delay,augmented_spelling
+10 minute late pahunchunga accident hai,report_delay,abbreviated
+item missing hai,order_issue,casual_hindi
+yaar baarish ki wajah se 20 min late honga,report_delay,abbreviated
+late ho jaunga 5 min,report_delay,abbreviated
+bawa next order ka address batao,get_address,abbreviated
+late oh jaunga ek ghanta,report_delay,augmented_spelling
+bh traffic ki wjh se aadh ghanta late honga,report_delay,abbreviated
+number not recahable hai,customer_unavailable,augmented_spelling
+ustad traffic ki wajah se 10 minute late honga,report_delay,casual_hindi
+bhaiya baarish ki wajah se aadh ghanta late honga,report_delay,augmented_spelling
+location samajh nhi aa rha,navigation_help,abbreviated
+10 minute late pahucnhunga tyre puncture hai,report_delay,augmented_spelling
+ustad nex torder ka address batao,get_address,augmented_spelling
+10 minute late pahunchunga petrol khatam h,report_delay,abbreviated
+bhi bheed ki wjh se ek ghanta late honga,report_delay,abbreviated
+late ho jaunga e kghanta,report_delay,augmented_spelling
+guru accident ki wajah se 10 minute late honga,report_delay,abbreviated
+sir mujhe aane mei n20 min lagenge,report_delay,augmented_spelling
+yaar bheed ki vjh se 10 minute late honga,report_delay,abbreviated
+aadh ghanta late aphunchunga baarish hai,report_delay,augmented_spelling
+15 mins late pahunchunga tyre puncture h,report_delay,abbreviated
+ek ghanta late pahunchunga accident hai,report_delay,abbreviated
+bawa bheed ki wajah se 15 mins late honga,report_delay,casual_hindi
+ek ghanta late pahunchung atraffic hai,report_delay,augmented_spelling
+20 min late pahunchunga bheed hai,report_delay,augmented_spelling
+bawa bheed ki vjh se 10 minute late honga,report_delay,abbreviated
+bawa baarish ki wajah se 20 min late honga,report_delay,augmented_spelling
+bhaiya bheed ki wajah se ek ghanta late honga,report_delay,casual_hindi
+15 mins late pahunchunga petrol khatam hai,report_delay,casual_hindi
+15 mins late pahunchunga baarish hai,report_delay,abbreviated
+20 min late pahunchunga traffic h,report_delay,abbreviated
+bhai baarish ki wajah se 5 min late honga,report_delay,augmented_spelling
+yaar bheed ki wajah se 10 miute late honga,report_delay,augmented_spelling
+ek ghanta late pahunchunga tyre puncture hai,report_delay,casual_hindi
+10 minute late pahunchunga bheed hai,report_delay,casual_hindi
+20 min late pauhnchunga baarish hai,report_delay,augmented_spelling
+bawa baarish ki waja hse ek ghanta late honga,report_delay,augmented_spelling
+location send karo guru,get_address,casual_hindi
+bhai traffic ki vjh se 5 min late honga,report_delay,abbreviated
+bhaiya tyre puncture ki wajah se 5 min late honga,report_delay,abbreviated
+bawa accident ki wajah se aadh ghanta late honga,report_delay,abbreviated
+aadh ghanta late pahunchunga baarish hai,report_delay,abbreviated
+bhaiya tyre puncture ki wajah se 10 minute late honga,report_delay,abbreviated
+10 minute late pahunchunga baaish hai,report_delay,augmented_spelling
+bawa baarish ki vjh se 10 minute late honga,report_delay,abbreviated
+petrol khatam ki wajah se aadh hganta late honga,report_delay,augmented_spelling
+late ho jaunga ek ghanta,report_delay,augmented_spelling
+ustad petrol khatam ki wajah se 5 min late hona,report_delay,augmented_spelling
+10 minute late pahunchunga petrol khatam hai,report_delay,abbreviated
+10 minute late pahunchunga traffic h,report_delay,abbreviated
+5 min late pahunchunga tyre puncture h,report_delay,abbreviated
+olcation send karo,get_address,augmented_spelling
+number not reachable h,customer_unavailable,abbreviated
+kriya grahak ka location bhejein,get_address,augmented_spelling
+bhaiya bheed ki wajah se 20 min late honga,report_delay,casual_hindi
+ek ghanta late pahunchunga bheed h,report_delay,abbreviated
+guru accident ki wjh se 20 min late honga,report_delay,abbreviated
+traffic ki wajah se 10 minute late honga,report_delay,augmented_spelling
+late ho jaunga ek ghanta,report_delay,augmented_spelling
+10 minute late pahunchunga accident hai,report_delay,casual_hindi
+guru petrol khatam ki wajah se 20 min late honga,report_delay,augmented_spelling
+customer phone nahi utha rha,customer_unavailable,abbreviated
+bawa traffic ki wjh se 15 mins late honga,report_delay,abbreviated
+10 minute late pahunchunga traffic h,report_delay,abbreviated
+yaar baarih ki wajah se 15 mins late honga,report_delay,augmented_spelling
+ek ghanta late pahunchunga tyre puncture hai,report_delay,abbreviated
+15 mins late pahunchunga bheed hai,report_delay,augmented_spelling
+15 mins late pahunchunga accident h,report_delay,abbreviated
+customer phone nhi utha rha,customer_unavailable,abbreviated
+bawa baarish ki ajah se 5 min late honga,report_delay,augmented_spelling
+tyre puncture ke karan delay hoga,report_delay,abbreviated
+20 min late pahunchunga accident hai,report_delay,augmented_spelling
+gate par koi nai hai bawa,customer_unavailable,abbreviated
+bhaiya tyre puncture ki waajh se aadh ghanta late honga,report_delay,augmented_spelling
+gate par koi nahi hai bawa,customer_unavailable,casual_hindi
+bhiya accident ki wajah se 15 mins late honga,report_delay,augmented_spelling
+15 mins late pahunchunga traffic hai,report_delay,augmented_spelling
+10 minute late pahunchunga bheed h,report_delay,abbreviated
+late ho jaunga 15 mins,report_delay,casual_hindi
+15 mins late pahunchunga traffic h,report_delay,abbreviated
+15 imns late pahunchunga baarish hai,report_delay,augmented_spelling
+ustad accident ki wajah se 20 min late hona,report_delay,augmented_spelling
+aadh ghanta late pahunchunga bheed h,report_delay,abbreviated
+kripya grahak ak location bhejein,get_address,augmented_spelling
+boss baarish ki wjh se 15 mins late honga,report_delay,abbreviated
+20 min late pahunchunga baarish h,report_delay,abbreviated
+boss traffic ki wajah se ek ghanta alte honga,report_delay,augmented_spelling
+ustad petrol khatam ki wajah se 20 min late honga,report_delay,casual_hindi
+boss tyre puncture ki wajah se 10 minute late honga,report_delay,casual_hindi
+accident ke karan delay hga,report_delay,augmented_spelling
+5 min late pahunchunga traffic hai,report_delay,augmented_spelling
+accident ke karan delay hoga,report_delay,abbreviated
+10 minute late pahunchunga traffic hai,report_delay,abbreviated
+boss tyre puncture ki wajah se ek ghanta lte honga,report_delay,augmented_spelling
+ek ghanta late pahunchunga accident h,report_delay,abbreviated
+bawa barish ki wajah se 15 mins late honga,report_delay,augmented_spelling
+ustad tyre puncture ki wajah se aadh ghanta late honga,report_delay,augmented_spelling
+ustad traffic ki wjh se 10 minute late honga,report_delay,abbreviated
+number not reachable hai,customer_unavailable,augmented_spelling
+package damage ho gaya ustad,order_issue,abbreviated
+ek ghanta late pahnuchunga tyre puncture hai,report_delay,augmented_spelling
+20 min late pahunchunga traffic h,report_delay,abbreviated
+gate par koi nahi h yaar,customer_unavailable,abbreviated
+ek ghanta late pahunchunga petrol khatam h,report_delay,abbreviated
+5 min late pahunchunga petrol khatam hai,report_delay,augmented_spelling
+yaar baarish ki wajah se 20 min late honga,report_delay,abbreviated
+number not reachable h,customer_unavailable,abbreviated
+5 min late pahunchunga petrol khatam hai,report_delay,abbreviated
+5 min late pahunchunga petrol khatam hai,report_delay,casual_hindi
+aadh ghanta late pahunchunga baarish h,report_delay,abbreviated
+bhaiya tyre puncture ki wajah se ek ghanta late honga,report_delay,augmented_spelling
+bawa raffic ki wajah se 20 min late honga,report_delay,augmented_spelling
+10 minute late pahunchunga baarish h,report_delay,abbreviated
+1 5mins late pahunchunga traffic hai,report_delay,augmented_spelling
+guru traffic ki wajah se aadh ghanta late honga,report_delay,augmented_spelling
+5 min late pahunchunga perol khatam hai,report_delay,augmented_spelling
+ek ghanta late pahunchunga accident hai,report_delay,augmented_spelling
+late ho jaunga aadh ghatna,report_delay,augmented_spelling
+bhaia traffic ki wajah se 10 minute late honga,report_delay,augmented_spelling
+aadh ghanta late pahunchunga traffic h,report_delay,abbreviated
+yaar accident ki wajah se 10 minute late honga,report_delay,casual_hindi
+bhai accident ki wajah se ek ghanta late honga,report_delay,augmented_spelling
+yaar customer pohne nahi utha raha,customer_unavailable,augmented_spelling
+20 min late pahunchunga tyre puncture h,report_delay,abbreviated
+ustad petrol khatam ki wajah se aadh ghanta late honga,report_delay,abbreviated
+sir aagami aadesh ka pata pradan karein,get_address,abbreviated
+item missing hai,order_issue,augmented_spelling
+ustad accident ki vjh se 20 min late honga,report_delay,abbreviated
+traffic ki wjh se ek ghanta late honga,report_delay,abbreviated
+ek ghatna late pahunchunga bheed hai,report_delay,augmented_spelling
+late ho jaunga 10 minute,report_delay,augmented_spelling
+rsta dikhao guru,navigation_help,augmented_spelling
+15 mins late pahunchunga bheed hai,report_delay,abbreviated
+20 imn late pahunchunga tyre puncture hai,report_delay,augmented_spelling
+bawa petrol khatam ki wajah se ek ghanta late honga,report_delay,augmented_spelling
+package damage ho gaya guru,order_issue,casual_hindi
+rasta dikha yaar,navigation_help,augmented_spelling
+bhaiya bheed ki wajah se 15 mins late honga,report_delay,augmented_spelling
+aadh ghnta late pahunchunga tyre puncture hai,report_delay,augmented_spelling
+location send karo,get_address,augmented_spelling
+tyre puncture ke karan delay hoga,report_delay,formal_hindi
+item missing hai,order_issue,abbreviated
+bhaiya baarish ki wajah se 10 minute late honga,report_delay,casual_hindi
+5 min late pahunchunga petrol khatam h,report_delay,abbreviated
+package damage ho agya ustad,order_issue,augmented_spelling
+late ho jaunga 5 min,report_delay,augmented_spelling
+boss order cancel kar do,order_issue,abbreviated
+late ho jaunga 20 min,report_delay,casual_hindi
+bhaiya accident ki wjh se aadh ghanta late honga,report_delay,abbreviated
+gps hang ho gaya,navigation_help,augmented_spelling
+10 minute late pahunchunga accident hai,report_delay,augmented_spelling
+bawa bheed ki wajah se ek ghanta late honga,report_delay,augmented_spelling
+aadh ghanta late pahunchunga tyre puncture hai,report_delay,casual_hindi
+darwaza bad hai,customer_unavailable,augmented_spelling
+rasta dikhao bawa,navigation_help,abbreviated
+ek ghanta late pahunchunga accident hai,report_delay,augmented_spelling
+10 minute late pahunchunga bheed hai,report_delay,abbreviated
+guru order acncel kar do,order_issue,augmented_spelling
+5 min late pahunchunga baarish h,report_delay,abbreviated
+ek ghanta late pahunchunga bheed h,report_delay,abbreviated
+ek ghanta late pahunchunga baarish hai,report_delay,abbreviated
+bhai tyre puncture ki wajah se aadh ghantal ate honga,report_delay,augmented_spelling
+bhaiya petrol khatam ki wajah se 5 imn late honga,report_delay,augmented_spelling
+20 min late pahunchunga tyre puncture hai,report_delay,augmented_spelling
+20 min late pahunchunga bheed h,report_delay,abbreviated
+15 mis late pahunchunga bheed hai,report_delay,augmented_spelling
+maoday map kaam nahi kar raha,navigation_help,augmented_spelling
+15 mins late pahunchunga bheed h,report_delay,abbreviated
+yaar tyre puncture ki vjh se 10 minute late honga,report_delay,abbreviated
+20 min late pahunchunga accident hia,report_delay,augmented_spelling
+kripya mujhe aane mein 20 min lagenge,report_delay,abbreviated
+yaar tyre puncture ki waja se aadh ghanta late honga,report_delay,augmented_spelling
+bhaiya accident ki wjh se ek ghanta late honga,report_delay,abbreviated
+accident ek karan delay hoga,report_delay,augmented_spelling
+yaar customer phone nahi uthar aha,customer_unavailable,augmented_spelling
+ripya map kaam nahi kar raha,navigation_help,augmented_spelling
+customer mil nhi rha,customer_unavailable,abbreviated
+guru pertol khatam ki wajah se 10 minute late honga,report_delay,augmented_spelling
+ek ghana late pahunchunga petrol khatam hai,report_delay,augmented_spelling
+boss petrol khatam ki wajah se 15 mins late honga,report_delay,augmented_spelling
+ek ghanta late pahunchunga bheed h,report_delay,abbreviated
+mahoday ma kaam nahi kar raha,navigation_help,augmented_spelling
+order cancel kar do,order_issue,abbreviated
+late ho jaunga 15 mins,report_delay,casual_hindi
+ek ghanta late pahunchunga petrol khatam hai,report_delay,casual_hindi
+guru petrol khatam ki vjh se aadh ghanta late honga,report_delay,abbreviated
+bawa accident ki wajah se 5 min late honga,report_delay,casual_hindi
+baarish ke karan delay hoga,report_delay,augmented_spelling
+late ho jaunga ek ghanta,report_delay,abbreviated
+bh baarish ki vjh se 10 minute late honga,report_delay,abbreviated
+ek ghanta late pahunchunga tyre puncture hai,report_delay,augmented_spelling
+mahoday aagami aadesh k pata pradan karein,get_address,augmented_spelling
+bhaiya traffic ki wajah se aadh ghanta late honga,report_delay,abbreviated
+bhaiya map stuck ho gaya h,navigation_help,abbreviated
+10 minute late pahunchunga bheed hai,report_delay,casual_hindi
+late ho jaunga 15 mins,report_delay,abbreviated
+ek ghanta late pahunchunga bheed h,report_delay,abbreviated
+ustada ccident ki wajah se 5 min late honga,report_delay,augmented_spelling
+15 mins late pahunchunga baarih hai,report_delay,augmented_spelling
+aadh ghnta late pahunchunga baarish hai,report_delay,augmented_spelling
+ek ghanta late pahunchunga baarish h,report_delay,abbreviated
+number not reachable hai,customer_unavailable,augmented_spelling
+boss petrol khatam ki vjh se 15 mins late honga,report_delay,abbreviated
+aadh ghanta late pahunchunga bheed h,report_delay,abbreviated
+late ho jaunga 5 min,report_delay,abbreviated
+late ho jaunga 20 min,report_delay,augmented_spelling
+late ho jaunga 15 mins,report_delay,abbreviated
+boss tyre puncture ki wajah se ek ghanta ltae honga,report_delay,augmented_spelling
+order radd karna hai,order_issue,formal_hindi
+guru petrol khatam ki waah se aadh ghanta late honga,report_delay,augmented_spelling
+bawa baarish ki wajah se aadh ghnta late honga,report_delay,augmented_spelling
+5 min late pahunchunga accident hai,report_delay,augmented_spelling
+20 min late pahunchunga accident h,report_delay,abbreviated
+gps hang ho gaya,navigation_help,casual_hindi
+10 minut late pahunchunga bheed hai,report_delay,augmented_spelling
+boss tyre puncture ki wjh se 15 mins late honga,report_delay,abbreviated
+bheed ki wajah se 5 min late honga,report_delay,casual_hindi
+15 mins lat epahunchunga accident hai,report_delay,augmented_spelling
+aadh ghanta late pahunchunga trye puncture hai,report_delay,augmented_spelling
+traffic ke karan delay hoga,report_delay,abbreviated
+guru accident ki wajah se aadh ghanta late honga,report_delay,augmented_spelling
+baarish ki wjh se ek ghanta late honga,report_delay,abbreviated
+10 minute late pahunchunga accident hai,report_delay,abbreviated
+guru traffic ki wajah s 10 minute late honga,report_delay,augmented_spelling
+bhaiya next order ka adr batao,get_address,abbreviated
+location send kro,get_address,abbreviated
+baarish ki wajah se 15 mins late honga,report_delay,augmented_spelling
+gate par koi nai h bhi,customer_unavailable,abbreviated
+baarish ki wjh se 15 mins late honga,report_delay,abbreviated
+tyre puncture ke karan delay hoga,report_delay,abbreviated
+gate par koi nhi h bhaiya,customer_unavailable,abbreviated
+traffic ki vjh se 10 minute late honga,report_delay,abbreviated
+10 minute late pahunchunga bheed h,report_delay,abbreviated
+10 minute late pahunchunga tyre puncture hai,report_delay,abbreviated
+5 min late pahunchunga traffic hai,report_delay,abbreviated
+ek ghanta late pahunchunga petrol khatam h,report_delay,abbreviated
+bhaiya accident ki wajah se aadh ghanta late honga,report_delay,abbreviated
+10 minute late pahunchunga bheed hai,report_delay,abbreviated
+number not reachable h,customer_unavailable,abbreviated
+10 minute late pahunchunga baarish hai,report_delay,augmented_spelling
+5 min late pahunchunga traffic h,report_delay,abbreviated
+location send karo bhia,get_address,augmented_spelling
+late ho jaunga adh ghanta,report_delay,augmented_spelling
+late ho jauna 10 minute,report_delay,augmented_spelling
+late ho jaunga 5 min,report_delay,abbreviated
+bhaiya tyre puncture ki wajah se 10 minute late honga,report_delay,augmented_spelling
+aadh ghanta late pahunchunga petrol khatam h,report_delay,abbreviated
+yaar accident ki wajah se aadh ghanta late honga,report_delay,augmented_spelling
+5 min late pahunchunga accident h,report_delay,abbreviated
+10 minute late pahunchunga tyre puncture h,report_delay,abbreviated
+ustad bheed ki vjh se 10 minute late honga,report_delay,abbreviated
+bheed ki wajah se aadh hanta late honga,report_delay,augmented_spelling
+late ho jaunga 10m inute,report_delay,augmented_spelling
+location send kro ustad,get_address,abbreviated
+bawa accident ki wajah se 15 mins late honga,report_delay,casual_hindi
+15 mins late pahunchunga baarish h,report_delay,abbreviated
+20 min late pahunchunga bheed h,report_delay,abbreviated
+bhaiya customer phone ni utha raha,customer_unavailable,abbreviated
+late ho jaunga aadh ghanta,report_delay,augmented_spelling
+bheed kiw ajah se 10 minute late honga,report_delay,augmented_spelling
+5 min late pahunchunga tyre puncture h,report_delay,abbreviated
+mahoday parcel kshatigrast h,order_issue,abbreviated
+20 min late pahunchunga accident hai,report_delay,abbreviated
+ek ghanta late pahunchunga bheed ahi,report_delay,augmented_spelling
+boss bheed ki wajah se 10 minute late hnoga,report_delay,augmented_spelling
+boss baarish ki wajah se 15 mins late honga,report_delay,abbreviated
+late ho jaunga 20 min,report_delay,casual_hindi
+yaa traffic ki wajah se 20 min late honga,report_delay,augmented_spelling
+ustad baarish ki vjh se aadh ghanta late honga,report_delay,abbreviated
+sutad accident ki wajah se 10 minute late honga,report_delay,augmented_spelling
+20 min late pahunchunga accident h,report_delay,abbreviated
+accident ki wajah se 15 mins late honga,report_delay,casual_hindi
+15 mins late pahunchunga tyre puncture h,report_delay,abbreviated
+15 mins late pahunchunga petrol hatam hai,report_delay,augmented_spelling
+15 mins late pahunhunga baarish hai,report_delay,augmented_spelling
+aadh ghanta late pahunchunga petrol khatam h,report_delay,abbreviated
+boss tyre puncture ki wajah se 5 min late honga,report_delay,augmented_spelling
+20 min late pahunchunga tyre puncture hai,report_delay,abbreviated
+20 min late pahunchunga bheed h,report_delay,abbreviated
+20 min late pahunchunga baarish hai,report_delay,casual_hindi
+ek ghanta late pahunchunga petrol khatam h,report_delay,abbreviated
+bawa accident ki wajah se 10 minute late honga,report_delay,augmented_spelling
+ek ghanta late pahunchunga bheed h,report_delay,abbreviated
+late ho jaung a10 minute,report_delay,augmented_spelling
+guru traffic ki vjh se 15 mins late honga,report_delay,abbreviated
+5 min late pahunchunga traffic hai,report_delay,augmented_spelling
+late ho jaunga ek ghanta,report_delay,casual_hindi
+bhi accident ki wajah se 20 min late honga,report_delay,abbreviated
+ek ganta late pahunchunga baarish hai,report_delay,augmented_spelling
+yaar baarish ki wajah se 15 mins late honga,report_delay,augmented_spelling
+yaar traffic ki wjh se 10 minute late honga,report_delay,abbreviated
+boss baarish ki wajah se aadh ghanta late honga,report_delay,augmented_spelling
+15 mins late pahunchunga baarish hai,report_delay,casual_hindi
+gate par koi nahi hai,customer_unavailable,augmented_spelling
+aadh ghanta late pahunchunga petrol khatam h,report_delay,abbreviated
+location samajh nah iaa raha,navigation_help,augmented_spelling
+15 mins late pahunchunga baarish h,report_delay,abbreviated
+ustad tyre puncture ki wajah se ek ghanta late honga,report_delay,casual_hindi
+item missing h,order_issue,abbreviated
+aadh ghant alate pahunchunga baarish hai,report_delay,augmented_spelling
+bh customer phone ni utha raha,customer_unavailable,abbreviated
+20 min late pahunchunga accident h,report_delay,abbreviated
+20 min late pahunchunga bheed h,report_delay,abbreviated
+tyre puncture ki wajah se 15 mins late honga,report_delay,casual_hindi
+bhai accidet ki wajah se 20 min late honga,report_delay,augmented_spelling
+bhaiya petrol khatam ki wjh se 5 min late honga,report_delay,abbreviated
+guru baarish ki wajah se aadh ghanta late honga,report_delay,augmented_spelling
+5 min late pahunchunga traffic hai,report_delay,casual_hindi
+bawa tyre puncture ki wjh se aadh ghanta late honga,report_delay,abbreviated
+bhai customer phone nahi utha raha,customer_unavailable,casual_hindi
+customer phoen nahi utha raha,customer_unavailable,augmented_spelling
+baarish ki wajah se ek ghanta late honga,report_delay,augmented_spelling
+bhaiya baarish ki wajah se 15 mins late honga,report_delay,casual_hindi
+10 minute late pahunchunga petrol khatam hai,report_delay,casual_hindi
