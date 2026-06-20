@@ -263,7 +263,7 @@ App runs at `http://localhost:5173`
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/edge-assist.git
+git clone https://github.com/Priyankshu-07/VOX.git
 cd VOX
 ```
 
