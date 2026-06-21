@@ -1,0 +1,10 @@
+.git
+.vscode
+
+**/__pycache__
+**/*.pyc
+
+backend/venv
+frontend/node_modules
+
+*.log

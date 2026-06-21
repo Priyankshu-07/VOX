@@ -4,20 +4,30 @@ services:
 
   backend:
     build:
-      context: ./backend
+      context: .
+      dockerfile: backend/Dockerfile
+
     container_name: vox-backend
+
     ports:
       - "8000:8000"
+
+    restart: always
+
     volumes:
-      - ./backend:/app
+      - ./model:/app/model
+      - ./data:/app/data
 
   frontend:
     build:
       context: ./frontend
+
     container_name: vox-frontend
+
     ports:
       - "5173:5173"
+
     depends_on:
       - backend
-    volumes:
-      - ./frontend:/app
+
+    restart: always
