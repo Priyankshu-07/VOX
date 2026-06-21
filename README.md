@@ -1,6 +1,6 @@
 
 
-# ⚡  VOX
+#   VOX
 
 ### Offline Hinglish Delivery Assistant — On-Device NLU for Low-Connectivity Environments
 
@@ -11,7 +11,7 @@
 
 ---
 
-## 📌 Table of Contents
+##  Table of Contents
 
 - [Overview](#-overview)
 - [Key Features](#-key-features)
@@ -28,7 +28,7 @@
 
 ---
 
-## 🧭 Overview
+##  Overview
 
 VOX is a fully **offline Natural Language Understanding (NLU) engine** purpose-built for last-mile delivery partners operating in poor or zero-connectivity zones across India. It processes **Hinglish** (Hindi + English code-mixed) commands using a **lightweight Bidirectional GRU model** exported to **ONNX**, enabling real-time inference on low-end Android hardware (2GB–4GB RAM, CPU-only) without any cloud dependency.
 
@@ -37,19 +37,19 @@ VOX is a fully **offline Natural Language Understanding (NLU) engine** purpose-b
 
 ---
 
-## ✨ Key Features
+##  Key Features
 
 | Feature | Description |
 |---|---|
-| 🗣️ **Hinglish NLU** | Understands natural code-mixed Hindi-English commands out of the box |
-| ⚡ **Sub-10ms Inference** | Bi-GRU model under 300k parameters — blazing fast even on budget hardware |
-| 🎯 **Dual Extraction** | Intent classification (ML) + Slot extraction (deterministic Regex engine) |
-| 📊 **Benchmark Suite** | Built-in `/benchmark` endpoint for latency, memory, and accuracy profiling |
-| 🧩 **Modular Design** | Clean separation: ML pipeline → ONNX inference → FastAPI → React UI |
+|  **Hinglish NLU** | Understands natural code-mixed Hindi-English commands out of the box |
+|  **Sub-10ms Inference** | Bi-GRU model under 300k parameters — blazing fast even on budget hardware |
+|  **Dual Extraction** | Intent classification (ML) + Slot extraction (deterministic Regex engine) |
+|  **Benchmark Suite** | Built-in `/benchmark` endpoint for latency, memory, and accuracy profiling |
+|  **Modular Design** | Clean separation: ML pipeline → ONNX inference → FastAPI → React UI |
 
 ---
 
-## 🏗️ System Architecture
+##  System Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -84,12 +84,12 @@ VOX is a fully **offline Natural Language Understanding (NLU) engine** purpose-b
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 edge-assist/
 │
-├── 📂 backend/                         # FastAPI Inference Server
+├──  backend/                         # FastAPI Inference Server
 │   ├── api/
 │   │   └── routes.py                   # All API endpoint definitions
 │   ├── core/
@@ -103,13 +103,13 @@ edge-assist/
 │   │   └── response_generator.py      # Contextual response builder
 │   └── main.py                         # FastAPI app entrypoint
 │
-├── 📂 data/                            # Datasets
+├──  data/                            # Datasets
 │   ├── full_dataset.csv                # Complete labeled Hinglish corpus
 │   ├── train.csv                       # Training split (80%)
 │   ├── val.csv                         # Validation split (10%)
 │   └── test.csv                        # Held-out test split (10%)
 │
-├── 📂 ml_pipeline/                     # Training & Export Pipeline
+├──  ml_pipeline/                     # Training & Export Pipeline
 │   ├── data_generator.py               # Synthetic Hinglish data generation
 │   ├── dataset.py                      # PyTorch Dataset class
 │   ├── tokenizer.py                    # Word-level tokenizer with <OOV>
@@ -118,14 +118,14 @@ edge-assist/
 │   ├── evaluate.py                     # Evaluation & metrics reporting
 │   └── inference.py                    # Local inference test script
 │
-├── 📂 model/                           # Exported Model Artifacts
+├──  model/                           # Exported Model Artifacts
 │   ├── best_model.pth                  # Best PyTorch checkpoint
 │   ├── quantized_model.pth             # Quantized model (optional)
 │   ├── model.onnx                      # Production ONNX model
 │   ├── model.onnx.data                 # External ONNX data (if applicable)
 │   └── vocab.json                      # Word-to-index vocabulary map
 │
-└── 📂 frontend/                        # React 18 + TypeScript (Vite)
+└──  frontend/                        # React 18 + TypeScript (Vite)
     ├── public/
     │   ├── favicon.svg
     │   └── icons.svg
@@ -138,7 +138,7 @@ edge-assist/
 
 ---
 
-## 🎯 Supported Intents
+##  Supported Intents
 
 EdgeAssist classifies delivery partner commands into **5 core intents**:
 
@@ -165,7 +165,7 @@ EdgeAssist classifies delivery partner commands into **5 core intents**:
 
 ---
 
-## 🧠 ML Pipeline
+##  ML Pipeline
 
 ### Model Architecture
 
@@ -173,7 +173,7 @@ EdgeAssist classifies delivery partner commands into **5 core intents**:
 Input (20 tokens) → Embedding (64-dim) → Bi-GRU (64 hidden × 2 directions)
                  → Global Max Pooling → Dense (128) → Output (5 classes)
 
-Total Parameters: ~250,000  ✅ Well under 1M limit
+Total Parameters: ~250,000   Well under 1M limit
 ```
 
 ### Training Configuration
@@ -185,7 +185,7 @@ Total Parameters: ~250,000  ✅ Well under 1M limit
 | Max Sequence Length | 20 tokens |
 | Embedding Dimension | 64 |
 | GRU Hidden Size | 64 (Bi-directional → 128) |
-| Early Stopping | ✅ Enabled |
+| Early Stopping |  Enabled |
 | OOV Token | `<OOV>` |
 | Export Format | ONNX (dynamic batch axis) |
 
@@ -207,7 +207,7 @@ python ml_pipeline/inference.py
 
 ---
 
-## ⚙️ Backend API
+##  Backend API
 
 ### Prerequisites
 
@@ -235,16 +235,16 @@ uvicorn main:app --reload --port 8000
 
 ---
 
-## 🖥️ Frontend Dashboard
+##  Frontend Dashboard
 
 A **mobile-first dark-mode dashboard** that simulates the delivery partner's Android interface.
 
 ### Features
 
-- 📝 **Text Input** — Type any Hinglish command
-- 🎯 **Intent Gauge** — Visual confidence meter for classified intent
-- 🏷️ **Slot Chips** — Extracted entities as interactive badges
-- 💬 **Response Panel** — Contextual action suggestions based on intent
+-  **Text Input** — Type any Hinglish command
+-  **Intent Gauge** — Visual confidence meter for classified intent
+-  **Slot Chips** — Extracted entities as interactive badges
+-  **Response Panel** — Contextual action suggestions based on intent
 
 ### Start Frontend
 
@@ -312,7 +312,7 @@ curl -X POST http://localhost:8000/predict \
 
 ---
 
-## 📡 API Reference
+##  API Reference
 
 ### `POST /predict`
 
@@ -359,7 +359,7 @@ curl -X POST http://localhost:8000/predict \
 
 ---
 
-## 📊 Benchmarks
+##  Benchmarks
 
 Tested on CPU-only execution (Intel Core i5, single-threaded, emulating mobile constraints):
 
@@ -375,7 +375,7 @@ Tested on CPU-only execution (Intel Core i5, single-threaded, emulating mobile c
 
 ---
 
-## 🗺️ Roadmap
+##  Roadmap
 
 - [x] Synthetic Hinglish dataset generation (5 intents)
 - [x] Bi-GRU model training + ONNX export
@@ -389,7 +389,7 @@ Tested on CPU-only execution (Intel Core i5, single-threaded, emulating mobile c
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Layer | Technology |
 |---|---|
