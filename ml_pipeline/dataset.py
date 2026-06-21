@@ -3,7 +3,6 @@ import torch
 from torch.utils.data import Dataset
 from typing import Dict
 from tokenizer import WordTokenizer
-
 INTENT_MAP = {
     "get_address": 0,
     "report_delay": 1,
@@ -12,25 +11,16 @@ INTENT_MAP = {
     "navigation_help": 4
 }
 REV_INTENT_MAP = {v: k for k, v in INTENT_MAP.items()}
-
 class IntentDataset(Dataset):
-    """
-    PyTorch dataset for parsing synthetic Hinglish logs.
-    """
     def __init__(self, csv_path: str, tokenizer: WordTokenizer, is_train: bool = False):
         self.data = pd.read_csv(csv_path)
         self.tokenizer = tokenizer
-        
-        # We only fit the tokenizer on the training split to simulate real-world unseen words
         if is_train:
-            self.tokenizer.fit(self.data['text'].tolist())
-            
+            self.tokenizer.fit(self.data['text'].tolist()) 
         self.texts = self.data['text'].tolist()
         self.labels = [INTENT_MAP[intent] for intent in self.data['intent'].tolist()]
-
     def __len__(self):
         return len(self.texts)
-
     def __getitem__(self, idx: int) -> Dict[str, torch.Tensor]:
         text = self.texts[idx]
         label = self.labels[idx]

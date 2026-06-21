@@ -18,8 +18,7 @@ def evaluate_model():
     model = BiGRUIntentModel(vocab_size=tokenizer.vocab_size)
     model.load_state_dict(torch.load(os.path.join(model_dir, 'best_model.pth')))
     model.eval()
-    
-    # Load test dataset
+
     test_dataset = IntentDataset(os.path.join(data_dir, 'test.csv'), tokenizer, is_train=False)
     test_loader = DataLoader(test_dataset, batch_size=32, shuffle=False)
     
@@ -34,10 +33,7 @@ def evaluate_model():
             
             all_preds.extend(preds.numpy())
             all_labels.extend(batch['label'].numpy())
-            
-    # Format and print the classification report
     target_names = [REV_INTENT_MAP[i] for i in range(len(REV_INTENT_MAP))]
-    
     print("\n--- Final Test Report ---")
     print(classification_report(all_labels, all_preds, target_names=target_names))
     print(f"Overall Accuracy: {accuracy_score(all_labels, all_preds) * 100:.2f}%")

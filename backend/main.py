@@ -5,10 +5,10 @@ from core.exceptions import global_exception_handler, inference_exception_handle
 from core.logger import get_logger
 import time
 
-logger = get_logger("edge_assist_api")
+logger = get_logger("VOX_api")
 
 app = FastAPI(
-    title="EdgeAssist API",
+    title="VOX API",
     description="Offline Hinglish Delivery Assistant Backend",
     version="1.0.0"
 )

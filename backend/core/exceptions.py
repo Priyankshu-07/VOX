@@ -2,7 +2,7 @@ from fastapi import Request
 from fastapi.responses import JSONResponse
 import logging
 
-logger = logging.getLogger("edge_assist_api")
+logger = logging.getLogger("VOX_api")
 
 class InferenceException(Exception):
     def __init__(self, message: str):
