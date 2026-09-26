@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🎙️ VOX
+#  VOX
 ### Offline Hinglish Delivery Assistant — On-Device NLU for Low-Connectivity Environments
 
 *A production-grade, offline-first Natural Language Understanding system that understands Hinglish voice/text commands — entirely on-device, zero internet required.*
@@ -11,7 +11,7 @@
 
 ---
 
-## 📖 Table of Contents
+##  Table of Contents
 - [Overview](#-overview)
 - [Key Features](#-key-features)
 - [System Architecture](#-system-architecture)
@@ -29,7 +29,7 @@
 
 ---
 
-## 🧭 Overview
+##  Overview
 
 **VOX** is a fully offline Natural Language Understanding (NLU) engine purpose-built for last-mile delivery partners operating in poor or zero-connectivity zones across India. It parses **Hinglish** (Hindi + English code-mixed) voice/text commands using a custom, lightweight **Bidirectional GRU** model exported to **ONNX**, enabling real-time inference on low-end Android hardware (2GB–4GB RAM, CPU-only) — **no cloud dependency at any point.**
 
@@ -40,7 +40,7 @@ Millions of delivery workers in Tier-2/Tier-3 India face inconsistent connectivi
 
 ---
 
-## ⚡ Key Features
+##  Key Features
 
 | Feature | Description |
 |---|---|
@@ -53,7 +53,7 @@ Millions of delivery workers in Tier-2/Tier-3 India face inconsistent connectivi
 
 ---
 
-## 🏗️ System Architecture
+##  System Architecture
 
 ```
                      ┌───────────────────────────────┐
@@ -93,7 +93,7 @@ Millions of delivery workers in Tier-2/Tier-3 India face inconsistent connectivi
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 VOX/
@@ -152,7 +152,7 @@ VOX/
 
 ---
 
-## 🎯 Supported Intents
+##  Supported Intents
 
 VOX classifies delivery partner commands into **5 core intents**:
 
@@ -178,7 +178,7 @@ VOX classifies delivery partner commands into **5 core intents**:
 
 ---
 
-## 🧠 ML Pipeline
+##  ML Pipeline
 
 ### Model Architecture
 ```
@@ -217,7 +217,7 @@ python ml_pipeline/inference.py
 
 ---
 
-## 🔌 Backend API
+##  Backend API
 
 ### Prerequisites
 ```bash
@@ -242,7 +242,7 @@ uvicorn main:app --reload --port 8000
 
 ---
 
-## 🖥️ Frontend Dashboard
+##  Frontend Dashboard
 
 A mobile-first, dark-mode dashboard that simulates the delivery partner's Android interface.
 
@@ -262,7 +262,7 @@ App runs at `http://localhost:5173`
 
 ---
 
-## 🐳 Docker Setup
+##  Docker Setup
 
 VOX ships fully containerized — separate `Dockerfile`s for backend and frontend, orchestrated by a root-level `docker-compose.yaml`.
 
@@ -313,7 +313,7 @@ docker run -p 5173:5173 vox-frontend
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Option 1: Run with Docker (Recommended)
 ```bash
@@ -379,7 +379,7 @@ curl -X POST http://localhost:8000/predict \
 
 ---
 
-## 📡 API Reference
+##  API Reference
 
 ### `POST /predict`
 **Request:**
@@ -422,7 +422,7 @@ curl -X POST http://localhost:8000/predict \
 
 ---
 
-## 📊 Benchmarks
+##  Benchmarks
 
 Tested on CPU-only execution (Intel Core i5, single-threaded — emulating mobile constraints):
 
@@ -438,7 +438,7 @@ Tested on CPU-only execution (Intel Core i5, single-threaded — emulating mobil
 
 ---
 
-## 🗺️ Roadmap
+##  Roadmap
 
 - [x] Synthetic Hinglish dataset generation (5 intents)
 - [x] Bi-GRU model training + ONNX export
@@ -453,7 +453,7 @@ Tested on CPU-only execution (Intel Core i5, single-threaded — emulating mobil
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Layer | Technology |
 |---|---|
