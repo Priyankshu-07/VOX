@@ -1,35 +1,28 @@
 import React, { useState } from 'react';
 import './App.css';
-
 interface Prediction {
   intent: string;
   confidence: number;
   slots: Record<string, string>;
   response: string;
 }
-
 function App() {
   const [text, setText] = useState('');
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<Prediction | null>(null);
   const [error, setError] = useState<string | null>(null);
-
   const handlePredict = async (e?: React.FormEvent) => {
     if (e) e.preventDefault();
     if (!text.trim()) return;
-
     setLoading(true);
     setError(null);
-    
     try {
       const res = await fetch(`${import.meta.env.VITE_API_URL}/predict`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ text })
       });
-      
       if (!res.ok) throw new Error('Failed to fetch prediction');
-      
       const data = await res.json();
       setResult(data);
       setText('');
@@ -40,8 +33,6 @@ function App() {
       setLoading(false);
     }
   };
-
-  // Mock voice interaction injecting random test data
   const handleVoice = () => {
     const examples = [
       "bhai location bhej de",
@@ -57,7 +48,7 @@ function App() {
     <div className="app-container">
       {/* Header */}
       <header className="app-header">
-        <div className="app-title">EdgeAssist.</div>
+        <div className="app-title">VOX.</div>
         <div className="status-badge">
           <div className="status-dot"></div>
           ONNX Engine
