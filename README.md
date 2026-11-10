@@ -1,47 +1,44 @@
 <div align="center">
-
 # VOX
 ### Offline Hinglish Delivery Assistant — On-Device NLU for Low-Connectivity Environments
-
+ 
 *A production-grade, offline-first Natural Language Understanding system that understands Hinglish voice/text commands — entirely on-device, zero internet required.*
-
-[Overview](#-overview) · [Architecture](#-system-architecture) · [Benchmarks](#-benchmarks) · [Getting Started](#-getting-started) · [API Reference](#-api-reference) · [Roadmap](#-roadmap)
-
+ 
+[Overview](#overview) · [Architecture](#system-architecture) · [Benchmarks](#benchmarks) · [Getting Started](#getting-started) · [API Reference](#api-reference) · [Roadmap](#roadmap)
+ 
 </div>
-
 ---
-
+ 
 ## Table of Contents
-- [Overview](#-overview)
-- [Key Features](#-key-features)
-- [System Architecture](#-system-architecture)
-- [Project Structure](#-project-structure)
-- [Supported Intents](#-supported-intents)
-- [ML Pipeline](#-ml-pipeline)
-- [Backend API](#-backend-api)
-- [Frontend Dashboard](#-frontend-dashboard)
-- [Docker Setup](#-docker-setup)
-- [Getting Started](#-getting-started)
-- [API Reference](#-api-reference)
-- [Benchmarks](#-benchmarks)
-- [Roadmap](#-roadmap)
-- [Tech Stack](#-tech-stack)
-
+- [Overview](#overview)
+- [Key Features](#key-features)
+- [System Architecture](#system-architecture)
+- [Project Structure](#project-structure)
+- [Supported Intents](#supported-intents)
+- [ML Pipeline](#ml-pipeline)
+- [Backend API](#backend-api)
+- [Frontend Dashboard](#frontend-dashboard)
+- [Docker Setup](#docker-setup)
+- [Getting Started](#getting-started)
+- [API Reference](#api-reference)
+- [Benchmarks](#benchmarks)
+- [Roadmap](#roadmap)
+- [Tech Stack](#tech-stack)
 ---
-
+ 
 ## Overview
-
+ 
 **VOX** is a fully offline Natural Language Understanding (NLU) engine purpose-built for last-mile delivery partners operating in poor or zero-connectivity zones across India. It parses **Hinglish** (Hindi + English code-mixed) voice/text commands using a custom, lightweight **Bidirectional GRU** model exported to **ONNX**, enabling real-time inference on low-end Android hardware (2GB–4GB RAM, CPU-only) — **no cloud dependency at any point.**
-
+ 
 ### Why VOX?
 Millions of delivery workers in Tier-2/Tier-3 India face inconsistent connectivity, and mainstream voice assistants both require internet and fail to understand code-mixed Hinglish. VOX closes that gap: a model small enough to ship on-device (**~2.1MB**), fast enough to feel instant (**sub-10ms inference**), and accurate enough to trust in production (**~95%+ intent accuracy, 100% slot precision**).
-
+ 
 > The project evolved through two prior iterations (EdgeAssist → ONYX → VOX), converging on a hybrid **ML + deterministic-regex** architecture that pairs a learned intent classifier with a rule-based slot extractor for guaranteed-precision entity extraction — a deliberate design choice over an end-to-end neural pipeline, explained below.
-
+ 
 ---
-
+ 
 ## Key Features
-
+ 
 | Feature | Description |
 |---|---|
 | **Hinglish NLU** | Understands natural code-mixed Hindi-English commands out of the box |
@@ -50,54 +47,94 @@ Millions of delivery workers in Tier-2/Tier-3 India face inconsistent connectivi
 | **Benchmark Suite** | Built-in `/benchmark` endpoint for latency, memory, and accuracy profiling |
 | **Modular Design** | Clean separation: ML pipeline → ONNX inference → FastAPI → React UI |
 | **Docker Support** | Fully containerized backend and frontend via Docker Compose |
-
+ 
 ---
-
+ 
 ## System Architecture
-
+ 
+The system is split into four parts: the **partner interface** (React dashboard), the **inference API** (FastAPI), the **offline model pipeline** (training and export), and **API support** (logging and error handling). Training happens once, offline, and produces the ONNX model and vocabulary that the inference engine loads at runtime.
+ 
 ```mermaid
 flowchart TD
-
-subgraph group_user["Delivery Partner"]
-  node_partner["Delivery Partner<br/>(Text / Voice Command)"]
+ 
+subgraph group_client["Partner interface"]
+  node_dashboard["Command dashboard<br/>[App.tsx]"]
 end
-
-subgraph group_frontend["Frontend Layer"]
-  node_frontend["React Frontend (Vite)<br/>Mobile-first UI · Voice Recorder · Intent Visualizer"]
+ 
+subgraph group_backend["Inference API"]
+  node_main["FastAPI app<br/>[main.py]"]
+  node_api["Prediction API<br/>[routes.py]"]
+  node_schema["Prediction schema<br/>[predict.py]"]
+  node_engine["Inference engine<br/>[inference_service.py]"]
+  node_slots["Slot extraction<br/>[slot_extractor.py]"]
+  node_responses["Response generation<br/>[response_generator.py]"]
 end
-
-subgraph group_backend["FastAPI Backend Layer"]
-  node_backend["FastAPI Backend"]
-  node_onnx["ONNX Runtime (CPU)<br/>Bi-GRU, ~300K params"]
-  node_slots["Rule-Based Slot Extractor<br/>(Regex, 100% Precision)<br/>delay_time · order_ref · customer_status · reason"]
+ 
+subgraph group_ml["Model pipeline (offline)"]
+  node_generator["Synthetic data<br/>[data_generator.py]"]
+  node_dataset["Intent dataset<br/>[dataset.py]"]
+  node_tokenizer["Word tokenizer<br/>[tokenizer.py]"]
+  node_model["Bi-GRU classifier<br/>[model.py]"]
+  node_training["Model training<br/>[train.py]"]
+  node_evaluation["Model evaluation<br/>[evaluate.py]"]
+  node_localinfer["Pipeline inference<br/>[inference.py]"]
+  node_artifacts[("Model artifacts<br/>model.onnx + vocab.json")]
 end
-
-subgraph group_ml["ML Pipeline"]
-  node_ml["ML Pipeline<br/>data_generator → tokenizer → train → export (.onnx)"]
+ 
+subgraph group_ops["API support"]
+  node_exceptions["Exception handlers<br/>[exceptions.py]"]
+  node_logger["Structured logging<br/>[logger.py]"]
 end
-
-node_partner -->|"uses"| node_frontend
-node_frontend -->|"HTTP (local)"| node_backend
-node_backend --> node_onnx
-node_backend --> node_slots
-node_ml -.->|"exports model weights"| node_onnx
-
+ 
+node_partner(("Delivery partner"))
+node_backendservice(("Backend service"))
+ 
+node_partner -->|"enters command"| node_dashboard
+node_dashboard -->|"posts text"| node_api
+node_api -->|"validates and shapes"| node_schema
+node_api -->|"invokes prediction"| node_engine
+node_engine -->|"extracts slots"| node_slots
+node_engine -->|"generates response"| node_responses
+node_main -->|"mounts routes"| node_api
+node_main -->|"registers handlers"| node_exceptions
+node_main -->|"logs requests"| node_logger
+node_engine -->|"logs inference"| node_logger
+node_engine -->|"raises failures"| node_exceptions
+node_engine -->|"loads ONNX and vocabulary"| node_artifacts
+node_api -->|"returns prediction"| node_dashboard
+ 
+node_generator -.->|"supplies training corpus"| node_dataset
+node_dataset -->|"encodes examples"| node_tokenizer
+node_training -->|"uses training data"| node_dataset
+node_training -->|"uses vocabulary"| node_tokenizer
+node_training -->|"trains classifier"| node_model
+node_evaluation -->|"loads examples"| node_dataset
+node_evaluation -->|"uses vocabulary"| node_tokenizer
+node_evaluation -->|"evaluates classifier"| node_model
+node_localinfer -->|"encodes input"| node_tokenizer
+node_localinfer -->|"runs inference"| node_model
+node_localinfer -->|"uses intent map"| node_dataset
+node_training -.->|"exports model artifacts"| node_artifacts
+node_backendservice -.->|"sends local HTTP requests"| node_api
+ 
 classDef toneBlue fill:#dbeafe,stroke:#2563eb,stroke-width:1.5px,color:#172554
 classDef toneAmber fill:#fef3c7,stroke:#d97706,stroke-width:1.5px,color:#78350f
 classDef toneMint fill:#dcfce7,stroke:#16a34a,stroke-width:1.5px,color:#14532d
-classDef toneNeutral fill:#f8fafc,stroke:#334155,stroke-width:1.5px,color:#0f172a
-
-class node_partner,node_frontend toneBlue
-class node_backend,node_onnx,node_slots toneAmber
-class node_ml toneMint
+classDef toneRose fill:#ffe4e6,stroke:#e11d48,stroke-width:1.5px,color:#881337
+classDef toneIndigo fill:#e0e7ff,stroke:#4f46e5,stroke-width:1.5px,color:#312e81
+class node_dashboard toneBlue
+class node_api,node_schema,node_engine,node_slots,node_responses,node_main toneAmber
+class node_generator,node_dataset,node_tokenizer,node_model,node_training,node_evaluation,node_localinfer,node_artifacts toneMint
+class node_exceptions,node_logger toneRose
+class node_partner,node_backendservice toneIndigo
 ```
-
+ 
 **Design rationale:** the intent classifier is a learned model (handles linguistic variation, code-mixing, phrasing drift), while slot extraction is deliberately kept **deterministic regex, not neural** — for a delivery-ops use case, mis-extracting a delay time or order reference is far costlier than the marginal recall a neural slot-filler would add. This hybrid split trades a small amount of extraction flexibility for **100% precision on structured fields**.
-
+ 
 ---
-
+ 
 ## Project Structure
-
+ 
 ```
 VOX/
 │
@@ -152,13 +189,13 @@ VOX/
 ├── docker-compose.yaml             # Multi-container orchestration
 └── .dockerignore                   # Files excluded from Docker build context
 ```
-
+ 
 ---
-
+ 
 ## Supported Intents
-
+ 
 VOX classifies delivery partner commands into **5 core intents**:
-
+ 
 | Intent | Example Hinglish Command | Description |
 |---|---|---|
 | `get_address` | *"Bhai next order ka address batao"* | Fetch delivery address details |
@@ -166,7 +203,7 @@ VOX classifies delivery partner commands into **5 core intents**:
 | `order_issue` | *"Packet damage ho gaya hai"* | Flag a problem with the order |
 | `customer_unavailable` | *"Customer phone nahi utha raha"* | Mark customer as unreachable |
 | `navigation_help` | *"Map stuck ho gaya location do"* | Request navigation assistance |
-
+ 
 **Extracted Slots (example):**
 ```json
 {
@@ -178,19 +215,19 @@ VOX classifies delivery partner commands into **5 core intents**:
   }
 }
 ```
-
+ 
 ---
-
+ 
 ## ML Pipeline
-
+ 
 ### Model Architecture
 ```
 Input (20 tokens) → Embedding (64-dim) → Bi-GRU (64 hidden × 2 directions)
                  → Global Max Pooling → Dense (128) → Output (5 classes)
-
+ 
 Total Parameters: ~250,000   (well under a 1M-parameter budget for mobile deployment)
 ```
-
+ 
 ### Training Configuration
 | Parameter | Value |
 |---|---|
@@ -202,26 +239,26 @@ Total Parameters: ~250,000   (well under a 1M-parameter budget for mobile deploy
 | Early Stopping | Enabled |
 | OOV Token | `<OOV>` |
 | Export Format | ONNX (dynamic batch axis) |
-
+ 
 ### Training the Model
 ```bash
 # Step 1: Generate synthetic Hinglish dataset
 python ml_pipeline/data_generator.py
-
+ 
 # Step 2: Train the Bi-GRU model
 python ml_pipeline/train.py
-
+ 
 # Step 3: Evaluate on test set
 python ml_pipeline/evaluate.py
-
+ 
 # Step 4: Run local inference test
 python ml_pipeline/inference.py
 ```
-
+ 
 ---
-
+ 
 ## Backend API
-
+ 
 ### Prerequisites
 ```bash
 cd backend
@@ -229,12 +266,12 @@ python -m venv venv
 source venv/bin/activate        # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
-
+ 
 ### Start Server
 ```bash
 uvicorn main:app --reload --port 8000
 ```
-
+ 
 ### Endpoints
 | Method | Endpoint | Description |
 |---|---|---|
@@ -242,19 +279,18 @@ uvicorn main:app --reload --port 8000
 | `POST` | `/predict` | Run NLU on a Hinglish text command |
 | `POST` | `/voice` | Accept audio file, run STT → predict |
 | `POST` | `/benchmark` | Batch inference with latency & accuracy metrics |
-
+ 
 ---
-
+ 
 ## Frontend Dashboard
-
+ 
 A mobile-first, dark-mode dashboard that simulates the delivery partner's Android interface.
-
+ 
 **Features:**
 - **Text Input** — type any Hinglish command
 - **Intent Gauge** — visual confidence meter for the classified intent
 - **Slot Chips** — extracted entities rendered as interactive badges
 - **Response Panel** — contextual action suggestions based on intent
-
 ### Start Frontend
 ```bash
 cd frontend
@@ -262,17 +298,16 @@ npm install
 npm run dev
 ```
 App runs at `http://localhost:5173`
-
+ 
 ---
-
+ 
 ## Docker Setup
-
+ 
 VOX ships fully containerized — separate `Dockerfile`s for backend and frontend, orchestrated by a root-level `docker-compose.yaml`.
-
+ 
 ### Prerequisites
 - Docker 24+ installed and running
 - Docker Compose v2 (ships with Docker Desktop; on Linux use `docker compose`, not `docker-compose`)
-
 ### Start All Services
 ```bash
 docker compose up --build
@@ -280,94 +315,93 @@ docker compose up --build
 This builds and starts:
 - **FastAPI backend** → `http://localhost:8000`
 - **React frontend** → `http://localhost:5173`
-
 ### Start in Detached Mode
 ```bash
 docker compose up --build -d
 ```
-
+ 
 ### Stop All Services
 ```bash
 docker compose down
 ```
-
+ 
 ### Build Individual Services
 ```bash
 # Backend only
 docker build -t vox-backend ./backend
-
+ 
 # Frontend only
 docker build -t vox-frontend ./frontend
 ```
-
+ 
 ### Run Individual Containers
 ```bash
 # Backend
 docker run -p 8000:8000 vox-backend
-
+ 
 # Frontend
 docker run -p 5173:5173 vox-frontend
 ```
-
+ 
 > **Notes:**
 > - `.dockerignore` excludes build artifacts, virtual environments, `node_modules`, and model checkpoints from the build context to keep images minimal.
 > - The ONNX model and `vocab.json` in `/model` must exist before building the backend image — run the ML pipeline locally first, or mount `/model` as a volume.
 > - If you change the backend API URL, update `VITE_API_URL` in `docker-compose.yaml`.
-
+ 
 ---
-
+ 
 ## Getting Started
-
+ 
 ### Option 1: Run with Docker (Recommended)
 ```bash
 # 1. Clone the repository
-git clone [https://github.com/Priyankshu-07/VOX.git](https://github.com/Priyankshu-07/VOX.git)
+git clone https://github.com/Priyankshu-07/VOX.git
 cd VOX
-
+ 
 # 2. Train and export the model (required before Docker build)
 python ml_pipeline/data_generator.py
 python ml_pipeline/train.py
-
+ 
 # 3. Start all services
 docker compose up --build
 ```
 Backend: `http://localhost:8000` · Frontend: `http://localhost:5173`
-
+ 
 ### Option 2: Run Manually
-
+ 
 **1. Clone the repository**
 ```bash
-git clone [https://github.com/Priyankshu-07/VOX.git](https://github.com/Priyankshu-07/VOX.git)
+git clone https://github.com/Priyankshu-07/VOX.git
 cd VOX
 ```
-
+ 
 **2. Train & export the model**
 ```bash
 python ml_pipeline/data_generator.py
 python ml_pipeline/train.py
 # Model artifacts saved to /model/
 ```
-
+ 
 **3. Start the backend**
 ```bash
 cd backend
 pip install -r requirements.txt
 uvicorn main:app --reload
 ```
-
+ 
 **4. Start the frontend**
 ```bash
 cd frontend
 npm install && npm run dev
 ```
-
+ 
 **5. Test a prediction**
 ```bash
 curl -X POST http://localhost:8000/predict \
   -H "Content-Type: application/json" \
   -d '{"text": "Traffic ki wajah se 10 min late honga"}'
 ```
-
+ 
 **Expected response:**
 ```json
 {
@@ -379,11 +413,11 @@ curl -X POST http://localhost:8000/predict \
   }
 }
 ```
-
+ 
 ---
-
+ 
 ## API Reference
-
+ 
 ### `POST /predict`
 **Request:**
 ```json
@@ -401,7 +435,7 @@ curl -X POST http://localhost:8000/predict \
   }
 }
 ```
-
+ 
 ### `POST /benchmark`
 **Request:**
 ```json
@@ -422,13 +456,13 @@ curl -X POST http://localhost:8000/predict \
   "total_samples": 3
 }
 ```
-
+ 
 ---
-
+ 
 ## Benchmarks
-
+ 
 Tested on CPU-only execution (Intel Core i5, single-threaded — emulating mobile constraints):
-
+ 
 | Metric | Value |
 |---|---|
 | Avg Inference Latency | **< 10ms** per request |
@@ -436,13 +470,13 @@ Tested on CPU-only execution (Intel Core i5, single-threaded — emulating mobil
 | Peak Memory Usage | **~40MB** |
 | Intent Classification Accuracy | **~95%+** on held-out test set |
 | Slot Extraction Precision | **100%** (deterministic regex) |
-
+ 
 > These benchmarks target emulation of low-end Android hardware (2GB–4GB RAM, ARM CPU). Native Android deployment may vary.
-
+ 
 ---
-
+ 
 ## Roadmap
-
+ 
 - [x] Synthetic Hinglish dataset generation (5 intents)
 - [x] Bi-GRU model training + ONNX export
 - [x] FastAPI inference server with slot extractor
@@ -453,11 +487,10 @@ Tested on CPU-only execution (Intel Core i5, single-threaded — emulating mobil
 - [ ] Native Android (Kotlin + ONNX Runtime Mobile) deployment
 - [ ] Expand to 10+ intents with regional dialect support
 - [ ] Over-the-air (OTA) vocabulary + model updates via delta patches
-
 ---
-
+ 
 ## Tech Stack
-
+ 
 | Layer | Technology |
 |---|---|
 | ML Framework | PyTorch 2.x |
@@ -468,11 +501,10 @@ Tested on CPU-only execution (Intel Core i5, single-threaded — emulating mobil
 | Styling | Vanilla CSS (mobile-first, dark mode) |
 | Containerization | Docker + Docker Compose |
 | Target Platform | Android (2GB–4GB RAM, CPU-only) |
-
+ 
 ---
-
+ 
 <div align="center">
-
 **Built to prove that production-grade NLU doesn't need the cloud — just careful engineering under tight constraints.**
-
+ 
 </div>
